@@ -1,35 +1,32 @@
+(function () {
 
-//
-// Component `Greeting`
-//
-function Greeting() {}
-Greeting.annotations = [
-    new angular.ComponentAnnotation({
+    //
+    // Components
+    //
+    var GreetingComponent = ng.Component({
         selector: 'greeting'
-    }),
-    new angular.ViewAnnotation({
+    }).View({
         templateUrl: 'templates/hello.html'
-    })
-];
+    }).Class({
+        constructor: function () {
+        }
+    });
 
-//
-// Component `Adieu`
-//
-function Adieu() {}
-Adieu.annotations = [
-    new angular.ComponentAnnotation({
+    var AdieuComponent = ng.Component({
         selector: 'adieu'
-    }),
-    new angular.ViewAnnotation({
+    }).View({
         templateUrl: 'templates/bye.html'
-    })
-];
+    }).Class({
+        constructor: function () {
+        }
+    });
 
-//
-// Bootstrap the App
-//
-document.addEventListener('DOMContentLoaded', function () {
-    angular.bootstrap(Adieu);
-    angular.bootstrap(Greeting);
-});
+    //
+    // Registration
+    //
+    document.addEventListener('DOMContentLoaded', function () {
+        ng.bootstrap(GreetingComponent);
+        ng.bootstrap(AdieuComponent);
+    });
 
+})();
