@@ -18,6 +18,12 @@
         templateUrl: 'templates/bye.html'
     }).Class({
         constructor: function () {
+        },
+        login: function () {
+            alert('Logged in')
+        },
+        logout: function () {
+            alert('Logged out')
         }
     });
 
