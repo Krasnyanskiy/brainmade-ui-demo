@@ -6,7 +6,6 @@ Greeting.annotations = [
     new angular.ViewAnnotation({
         directives: [Adieu],
         template: '<h1>Hello!</h1><hr><adieu></adieu>'
-        //template: '/templates/hello.html'
     })
 ];
 
