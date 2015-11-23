@@ -1,24 +1,33 @@
+
+//
+// Component `Greeting`
+//
 function Greeting() {}
 Greeting.annotations = [
     new angular.ComponentAnnotation({
         selector: 'greeting'
     }),
     new angular.ViewAnnotation({
-        directives: [Adieu],
-        template: '<h1>Hello!</h1><hr><adieu></adieu>'
+        templateUrl: 'templates/hello.html'
     })
 ];
 
+//
+// Component `Adieu`
+//
 function Adieu() {}
 Adieu.annotations = [
     new angular.ComponentAnnotation({
         selector: 'adieu'
     }),
     new angular.ViewAnnotation({
-        template: '<h1>Good bye!</h1>'
+        templateUrl: 'templates/bye.html'
     })
 ];
 
+//
+// Bootstrap the App
+//
 document.addEventListener('DOMContentLoaded', function () {
     angular.bootstrap(Adieu);
     angular.bootstrap(Greeting);
