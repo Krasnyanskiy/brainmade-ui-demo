@@ -1,0 +1,9 @@
+<div class="home">
+
+    <pre *if="jwt" class="jwt"><code>{{jwt}}</code></pre>
+    <pre *if="jwt" class="jwt"><code>{{decodedJwt | json}}</code></pre>
+
+    <p><a (click)="callSecuredApi()">Call Secure API</a></p>
+    <p><a (click)="logout()">Logout</a></p>
+
+</div>
